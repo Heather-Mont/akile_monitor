@@ -138,7 +138,11 @@ mkdir -p /etc/ak_monitor/
 cd /etc/ak_monitor/
 
 # Download client
-wget -O client https://github.com/akile-network/akile_monitor/releases/latest/download/$CLIENT_FILE
+if [ -n "$proxy_type" a -n "$proxy_address" ]; then
+    curl -Lo client https://github.com/Heather-Mont/akile_monitor/releases/latest/download/$CLIENT_FILE --proxy ${proxy_type}://127.0.0.1:${proxy_address}
+else
+    wget -O client https://github.com/Heather-Mont/akile_monitor/releases/latest/download/$CLIENT_FILE
+fi
 chmod +x client
 
 # Create systemd service file
