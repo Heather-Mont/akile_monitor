@@ -1,0 +1,7 @@
+{
+  "auth_secret": "auth_secret",
+  "url": "ws://localhost:3000/monitor",
+  "net_name": "eth0",
+  "disk_name": "vda",
+  "name": "HK-Akile"
+}
