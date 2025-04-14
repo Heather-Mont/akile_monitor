@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Check if script is run as root
 if [ "$(id -u)" -ne 0 ]; then
     echo "Please run as root"
