@@ -154,10 +154,10 @@ cd /etc/ak_monitor/
 # Download client
 if [ -n "$proxy_type" ] && [ -n "$proxy_address" ]; then
     apk add curl
-    curl -Lo client "https://github.com/akile-network/akile_monitor/releases/latest/download/$CLIENT_FILE" --proxy "${proxy_type}://${proxy_address}"
+    curl -Lo client "https://github.com/Heather-Mont/akile_monitor/releases/latest/download/$CLIENT_FILE" --proxy "${proxy_type}://${proxy_address}"
 else
     apk add wget
-    wget -O client "https://github.com/akile-network/akile_monitor/releases/latest/download/$CLIENT_FILE"
+    wget -O client "https://github.com/Heather-Mont/akile_monitor/releases/latest/download/$CLIENT_FILE"
 fi
 chmod +x client
 
